@@ -78,7 +78,7 @@ server = app.server
 
 app.layout = dbc.Container(
     [
-        html.H1("Project Time Line", className="bg-primary text-white p-1 text-center"),
+        html.H1("Individual capacity planner", className="bg-primary text-white p-1 text-center"),
         dbc.Button(
             "Add task", n_clicks=0, id="add-row-btn", size="sm"
         ),
@@ -91,7 +91,7 @@ app.layout = dbc.Container(
             dropdown={
                 "Resource": {
                     "clearable": False,
-                    "options": [{"label": i, "value": i} for i in ["A", "B", "C", "D"]],
+                    "options": [{"label": i, "value": i} for i in ["Daz", "Slave1", "Minion1", "Skivvy2"]],
                 },
             },
             css=DATA_TABLE_STYLE.get("css"),
@@ -113,7 +113,7 @@ def create_gantt_chart(updated_table_as_df):
         x_end="Finish",
         y="Task",
         color="Resource",
-        title="Project Plan Gantt Chart",
+        title="Capacity chart",
     )
 
     gantt_fig.update_layout(
