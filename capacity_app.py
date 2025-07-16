@@ -13,9 +13,9 @@ DATA_TABLE_COLUMNS = [
         "name": "Days",
         "type": "numeric",
     },
-    {"id": "Resource", "name": "Resource", "presentation": "dropdown"},
+    {"id": "Resource", "name": "Resource", "presentation": "dropdown", "editable": True},
     {"id": "Start", "name": "Start", "type": "datetime"},
-    {"id": "Finish", "name": "End", "type": "datetime", "editable": False},
+    {"id": "Finish", "name": "End", "type": "datetime", "editable": True},
 ]
 
 DATA_TABLE_STYLE = {
