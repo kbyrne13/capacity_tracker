@@ -79,11 +79,11 @@ server = app.server
 app.layout = dbc.Container(
     [
         html.H1("Individual capacity planner", className="bg-primary text-white p-1 text-center"),
-        html.Hr()
+        html.Hr(),
         dbc.Button(
             "Add task", n_clicks=0, id="add-row-btn", size="sm"
         ),
-        html.Hr()
+        html.Hr(),
         dash_table.DataTable(
             id="user-datatable",
             sort_action="native",
